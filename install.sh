@@ -19,8 +19,9 @@
 #rm nvim-linux64.tar.gz
 
 #echo "Neovim has been installed."
-
 rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
+#rm -rf ~/.config/nvim
 
 # Install NvChad
 echo -e "${GREEN}-==Installing NvChad ...==-${NC}"
@@ -30,9 +31,10 @@ echo "NvChad has been installed"
 
 # Replace the configs and plugins directory in ~/config/nvim/lua with the ones in the current directory
 echo -e "${GREEN}-==Copying Files==-${NC}"
-rsync -av --exclude='README.md' --exclude='.git/' --exclude='install.sh' ./ ~/.config/nvim/lua/
+rsync -av --exclude='README.md' --exclude='.git/' --exclude='install.sh' /neovim-config/ ~/.config/nvim/lua/
 
 # Open Neovim
+#nvim --headless +MasonInstallAll +qa
 nvim --headless +MasonInstallAll +qa
 
 
