@@ -29,6 +29,9 @@ git clone https://github.com/NvChad/starter ~/.config/nvim && nvim --headless +P
 
 echo "NvChad has been installed"
 
+rm -rf $HOME/.local/share/nvim
+rm -rf $HOME/.cache/nvim
+
 # Replace the configs and plugins directory in ~/config/nvim/lua with the ones in the current directory
 echo -e "${GREEN}-==Copying Files==-${NC}"
 rsync -av --exclude='README.md' --exclude='.git/' --exclude='install.sh' /neovim-config/ ~/.config/nvim/lua/
