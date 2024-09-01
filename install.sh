@@ -21,7 +21,7 @@
 #echo "Neovim has been installed."
 rm -rf ~/.local/share/nvim
 rm -rf ~/.local/state/nvim
-#rm -rf ~/.config/nvim
+rm -rf ~/.config/nvim
 
 # Install NvChad
 echo -e "${GREEN}-==Installing NvChad ...==-${NC}"
@@ -29,8 +29,8 @@ git clone https://github.com/NvChad/starter ~/.config/nvim && nvim --headless +P
 
 echo "NvChad has been installed"
 
-rm -rf $HOME/.local/share/nvim
-rm -rf $HOME/.cache/nvim
+rm -rf ~/.local/share/nvim
+rm -rf ~/.cache/nvim
 
 # Replace the configs and plugins directory in ~/config/nvim/lua with the ones in the current directory
 echo -e "${GREEN}-==Copying Files==-${NC}"
