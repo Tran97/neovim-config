@@ -25,7 +25,8 @@ rm -rf ~/.config/nvim
 
 # Install NvChad
 echo -e "${GREEN}-==Installing NvChad ...==-${NC}"
-git clone https://github.com/NvChad/starter ~/.config/nvim && nvim --headless +PackerSync +qall
+#git clone https://github.com/NvChad/starter ~/.config/nvim && nvim --headless +PackerSync +qall
+git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth && nvim --headless +PackerSyns qall
 
 echo "NvChad has been installed"
 
